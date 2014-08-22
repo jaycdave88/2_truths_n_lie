@@ -14,27 +14,26 @@ class Controller
     input_string = input[0]
     count = 0
     View.welcome
+    Student.all.shuffle
     current_student = Student.all[count]
 
-    until current_student.id == Student.all.length || gets.chomp == "quit"
-
+    until current_student.id == Student.all.length 
         View.display_student(current_student)
 
         View.display_mc(displayChoices(current_student))
-        if check_answer(gets.chomp)
+        answer = check_answer(gets.chomp)
+        if answer == true
           View.true
           count += 1 
           current_student = Student.all[count]
-        elsif !check_answer(gets.chomp) 
+        elsif answer == false
           View.false
-          count += 1 
+          # count += 1 
           current_student = Student.all[count]
         end
-        
-  
     end
 
-    View.quit
+    puts "Game over."
 
         #should break the loop and exit console
 
@@ -49,6 +48,7 @@ class Controller
       options << truth
     end
 
+    options.shuffle
 
     @mc_hash["A"] = options[0]
     @mc_hash["B"] = options[1]
@@ -60,7 +60,13 @@ class Controller
 
   def check_answer(letter)
   
-    @mc_hash[letter].class != Truth ? true : false
+    if @mc_hash[letter].class == Lie
+      return true
+    elsif @mc_hash[letter].class == Truth
+      return false
+    else
+      return "you can't do that"
+    end
 
   end
 
