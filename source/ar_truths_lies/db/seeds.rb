@@ -1,13 +1,56 @@
 require_relative '../config/application'
 
-module DatabaseSeeder
+Student.create(first_name: "Andrew",  last_name: "McClellan")
+Student.create(first_name:  "Ryan" ,  last_name: "Eddy"  )
+Student.create(first_name: "Yen"  ,  last_name: "Tran"  )
+Student.create(first_name:  "Melissa" ,  last_name:  "Roman" )
+Student.create(first_name: "Gary"  ,  last_name: "Hammell"  )
+Student.create(first_name:  "Elena" ,  last_name: "Sharma"  )
+Student.create(first_name: "Kelly" ,  last_name:"Yamamoto")
+Student.create(first_name: "James" ,  last_name: "Robinson"  )
+Student.create(first_name:  "Matt" ,  last_name: "Darin"  )
+Student.create(first_name: "Alisa"  ,  last_name: "Tatarinova"  )
+Student.create(first_name: "Sandra"  ,  last_name: "Cohen"  )
+Student.create(first_name:  "Clark" ,  last_name:  "Fausier" )
 
-	def populate_tables
-    Student.create(first_name: "test", last_name: "person")
-	end
 
-end
+Truth.create(description: "I broke my arm while arm-wrestling", student_id: 1)
+Truth.create(description: "I have been skydiving" , student_id: 1 )
+Truth.create(description: "Adventure Time is one of my favorite shows", student_id: 2 )
+Truth.create(description: "I am red-green colorblind", student_id: 2)
+Truth.create(description: "I grew up in a Buddhist temple" , student_id: 3)
+Truth.create(description: "I once raced down the Autobahn in an Audi R8", student_id: 3 )
+Truth.create(description: "I don't like bacon" , student_id: 4 )
+Truth.create(description: "I am afraid of heights", student_id: 4 )
+Truth.create(description: "I am the middle of 5 children", student_id: 5 )
+Truth.create(description: "I like to surf", student_id: 5 )
+Truth.create(description: "I caused my little sister to break both of her arms" , student_id: 6 )
+Truth.create(description: "I don't know how to ride a bike" , student_id: 6 )
+Truth.create(description: "My tattoo was given to me by a bike messenger undergoing a career change" , student_id: 7)
+Truth.create(description:  "I was once asked to join a harem when responding to a roommate ad on Craigslist", student_id: 7 )
+Truth.create(description:  "I was in an episode of the reality TV show Bad Girls Club LA", student_id: 8)
+Truth.create(description: "I once wrote a program to wiggle my mouse occasionally so I wouldn't appear as AWAY on instant messenger while working from home" , student_id: 8 )
+Truth.create(description: "I like to snowboard" , student_id: 9 )
+Truth.create(description:  "I have visited 30 countries", student_id: 9 )
+Truth.create(description: "I broke my wrist by tripping over my own feet" , student_id: 10)
+Truth.create(description:  "I pierced my own ears", student_id: 10 )
+Truth.create(description: "I sang in Jazz band in high school" , student_id: 11 )
+Truth.create(description: "I accidentally set fire to the back of a cop car" , student_id: 11 )
+Truth.create(description: "The only shoes I own are Crocs" , student_id: 12 )
+Truth.create(description: "I like big butts and I cannot lie" , student_id: 12 )
 
-DatabaseSeeder.populate_tables
+
+Lie.create(description: "I have seen 3 tornadoes", student_id: 1 )
+Lie.create(description: "I have two dogs and a cat", student_id: 2)
+Lie.create(description: "I hate chocolate", student_id: 3 )
+Lie.create(description: "I only have 5 pairs of shoes", student_id: 4 )
+Lie.create(description: "I have gone skydiving" , student_id: 5 )
+Lie.create(description: "I went on a month long canoe trip to the Boundary Waters", student_id: 6)
+Lie.create(description: "I make extensive crafts and jewelry out of pop tabs", student_id: 7)
+Lie.create(description: " I co-founded the ‘East Sussex Under-40’s Dogging Society'", student_id: 8)
+Lie.create(description: "I have a sailboat in San Diego", student_id: 9 )
+Lie.create(description: "I still have all of my wisdom teeth", student_id: 10 )
+Lie.create(description: "I have been to China", student_id:11 )
+Lie.create(description: "I don't actually know how to use ActiveRecord", student_id: 12)
 
 
